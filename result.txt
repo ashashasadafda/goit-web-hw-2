@@ -1,0 +1,16 @@
+(goit-web-hw-2-py3.11) PS E:\PyCharm Projects\goit-web-hw-2\goit-web-hw-2> docker images
+REPOSITORY                 TAG       IMAGE ID       CREATED          SIZE
+personal_assistant         latest    2ce35c5492c8   51 seconds ago   234MB
+mongo                      6         2835e1541e70   8 weeks ago      716MB
+mongo                      6.0       2835e1541e70   8 weeks ago      716MB
+ashasha/http-server        latest    bca99ec4756d   2 months ago     1.1GB
+redis                      latest    590b81f2fea1   2 months ago     117MB
+docker/welcome-to-docker   latest    c1f619b6477e   11 months ago    18.6MB
+(goit-web-hw-2-py3.11) PS E:\PyCharm Projects\goit-web-hw-2\goit-web-hw-2> docker run -it personal_assistant /bin/bash
+root@e723219a5faf:/app# docker exec -it <container-id> /bin/bash
+bash: container-id: No such file or directory
+root@e723219a5faf:/app# docker exec -it <2ce35c5492c8> /bin/bash
+bash: 2ce35c5492c8: No such file or directory
+root@e723219a5faf:/app# poetry run python personal_assistant/main.py
+/root/.cache/pypoetry/virtualenvs/goit-web-hw-2-9TtSrW0h-py3.11/bin/python: can't open file '/app/personal_assistant/main.py': [Errno 2] No such file or directory
+root@e723219a5faf:/app#
